@@ -20,6 +20,7 @@ public interface Budynek {
     String WlascicielBudynku(String Imie, String Nazwisko);
 
 
+
     public class KolorEnum {
         enum Kolor {
             Zielony, Niebieski, Czerwony, Biały
