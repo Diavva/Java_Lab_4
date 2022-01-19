@@ -1,3 +1,5 @@
+import java.util.InputMismatchException;
+import java.util.Scanner;
 
 public class Main {
 
@@ -28,6 +30,48 @@ public class Main {
         b) stworzyć dowolny przykład z ArithmeticException ,
         c) stworzyć dowolny przykład z 2 lub 3 blokami catch i z blokiem finally,
          */
+
+        Scanner scan = new Scanner(System.in);
+
+
+        int[] tablica = new int[6];
+        tablica[0] = 1;
+        tablica[1] = 2;
+        tablica[2] = 3;
+        tablica[3] = 4;
+        tablica[4] = 5;
+        tablica[5] = 6;
+
+
+
+        for( ; ;) {
+
+            System.out.print("Wprowadź liczbę aby wyświetlić tablice: " );
+
+
+            try {
+                int i = scan.nextInt();
+                System.out.println(tablica[i]);
+            } catch (InputMismatchException ex) {
+                System.out.println("Proszę wprowadzić liczbę");
+                break;
+
+            } catch (ArrayIndexOutOfBoundsException e) {
+                System.out.println("Liczba zbyt duża");
+                break;
+            } finally {
+                System.out.println("\n");
+            }
+        }
+
+
+
+
+
+
+
+
+
 
     }
 }
