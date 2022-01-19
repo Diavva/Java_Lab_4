@@ -23,6 +23,5 @@ public interface Budynek {
     public class KolorEnum {
         enum Kolor {
             Zielony, Niebieski, Czerwony, Biały
-    
         }
 }   }
